@@ -12,7 +12,7 @@ const SignIn = () => {
 
   const { signinUser } = UserAuth();
   const { provider } = UserAuth();
-  const { user } = UserAuth();
+
 
   const navigate = useNavigate();
 

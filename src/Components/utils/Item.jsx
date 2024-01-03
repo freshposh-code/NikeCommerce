@@ -48,7 +48,7 @@ const Item = ({
   };
   const { user } = UserAuth();
   const Cartid = doc(db, "users", `${user?.email}`);
-  const [saved, setSaved] = useState(false);
+  const [ , setSaved] = useState(false);
 
   const handleCart = async () => {
     if (user?.email) {

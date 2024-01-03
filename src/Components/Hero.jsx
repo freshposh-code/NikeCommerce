@@ -1,7 +1,6 @@
 import React from "react";
 import Clips from "../Components/utils/Clips";
 import Socials from "./utils/Socials";
-import { Link } from "react-router-dom";
 
 const Hero = ({
   heroapi: { title, subtitle, btntext, img, sociallinks, videos },
