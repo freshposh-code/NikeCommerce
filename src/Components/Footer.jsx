@@ -31,7 +31,7 @@ const Footer = ({ footerAPI }) => {
           <div className="mt-5 text-center">
             <p className="text-sm md:text-center">
               Copyright <sup className="text-base font-bold">C</sup> All Right
-              Reserved 2023-2024
+              Reserved 2023
             </p>
             <a href="#top">
               <span className="font-bold">Pøsh-cødę</span>
