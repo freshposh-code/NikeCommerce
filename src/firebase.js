@@ -8,12 +8,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyBwmbVg8RlLzxP12X9jgby8mgDFcvYVb9A',
-  authDomain: "posh-nikestore.firebaseapp.com",
-  projectId: "posh-nikestore",
-  storageBucket: "posh-nikestore.appspot.com",
-  messagingSenderId: "218971176194",
-  appId: "1:218971176194:web:b9eb2b066034a055c8561b",
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_SENDER_ID ,
 };
 
 // Initialize Firebase
