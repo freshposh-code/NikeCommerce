@@ -33,12 +33,7 @@ const Stories = ({ story: { title, news } }) => {
             {news.map((val, i) => (
               <SplideSlide key={i} className="mb-0.5">
                 <div className="relative grid items-center gap-4 pb-2 rounded-lg shadow shadow-slate-200 ring-1 ring-slate-200">
-                  <div className="">
-                    <img
-                      src={val.img}
-                      alt={`img/story/${i}`}
-                      className="h-auto w-full shadow-md shadow-slate-200 rounded-tl-lg rounded-tr-lg"
-                    />
+                  <div>
                     <div className="flex items-center justify-between w-full px-4">
                       <div className="flex items-center gap-0.5">
                         <HeartFilled className="icon-style text-red-500" />
