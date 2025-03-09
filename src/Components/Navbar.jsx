@@ -8,29 +8,9 @@ import { logo } from "../assets";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTotalQTY, setOpenCart } from "../app/CartSlice";
-import { UserAuth } from "./Context/AuthContext";
-import PersonIcon from "@mui/icons-material/Person";
-import { Link, useNavigate } from "react-router-dom";
-import toast from "react-hot-toast";
 
 const Navbar = () => {
   const [navState, setNavState] = useState(false);
-  const [error, setError] = useState("");
-
-  const { user } = UserAuth();
-  const { LogOut } = UserAuth();
-  const navigate = useNavigate();
-
-  const handleLogout = async (e) => {
-    try {
-      navigate("/signin");
-      await LogOut();
-      toast.success(`Logged out sucsessfully`);
-    } catch (e) {
-      console.log(error);
-      setError(e.message);
-    }
-  };
 
   const onNavScroll = () => {
     if (window.scrollY > 30) {
