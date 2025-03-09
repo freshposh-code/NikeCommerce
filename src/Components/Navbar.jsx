@@ -77,18 +77,10 @@ const Navbar = () => {
               />
             </a>
           </div>
-          {user?.email ? (
             <div>
               <ul className="flex items-center  gap-2">
                 <li className="grid items-center">
                   <Search
-                    className={`icon-style ${
-                      navState && "filter brightness-0"
-                    }`}
-                  />
-                </li>
-                <li className="grid items-center" onClick={handleLogout}>
-                  <Logout
                     className={`icon-style ${
                       navState && "filter brightness-0"
                     }`}
@@ -117,43 +109,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-          ) : (
-            <div>
-              <ul className="flex items-center  gap-2">
-                <li className="grid items-center">
-                  <Search
-                    className={`icon-style ${
-                      navState && "filter brightness-0"
-                    }`}
-                  />
-                </li>
-                <Link to="/signup">
-                  <li className="grid items-center">
-                    <PersonIcon
-                      className={`icon-style ${
-                        navState && "filter brightness-0"
-                      }`}
-                    />
-                  </li>
-                </Link>
-                <li className="grid items-center">
-                  <button
-                    type="button"
-                    className="border-none outline-none active:scale-110 transition-all duration-300 relative"
-                  >
-                    <Link to="/signin">
-                      <HowToRegSharp
-                        className={`icon-style ${
-                          navState && "filter brightness-0"
-                        }`}
-                      />
-                    </Link>
-                  </button>
-                </li>
-              </ul>
-            </div>
-          )}
-        </nav>
+           </nav>
       </header>
     </>
   );

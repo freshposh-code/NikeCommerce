@@ -21,7 +21,6 @@ const Item = ({
 }) => {
   const dispatch = useDispatch();
   const handleCart2 = () => {
-    if (user?.email) {
       const item = {
         id,
         title,
@@ -32,28 +31,20 @@ const Item = ({
         price,
       };
       dispatch(setAddItemToCart(item));
-    }
   };
 
   const onCartToggle = () => {
-    if (user?.email) {
       dispatch(
         setOpenCart({
           cartState: true,
         })
       );
-    } else {
-      toast.error(`Account needed to purchase`);
-    }
   };
-  const { user } = UserAuth();
-  const Cartid = doc(db, "users", `${user?.email}`);
   const [ , setSaved] = useState(false);
 
   const handleCart = async () => {
-    if (user?.email) {
       setSaved(true);
-      await updateDoc(Cartid, {
+      await updateDoc( {
         savedCart: arrayUnion({
           id: 1,
           title: title,
@@ -61,9 +52,6 @@ const Item = ({
           img: img,
         }),
       });
-    } else {
-      toast.error(`Please Signup to add to cart`);
-    }
   };
 
   return (
